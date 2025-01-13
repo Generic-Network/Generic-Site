@@ -14,8 +14,25 @@
   }
 }
 
+
 body {
+  overflow: visible;
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Für Firefox */
+html {
+  scrollbar-width: none; /* Versteckt die Scrollbar */
+}
+
+/* Für WebKit-basierte Browser (Chrome, Safari, Edge, etc.) */
+html::-webkit-scrollbar {
+  display: none; /* Versteckt die Scrollbar */
+}
+
+/* Sicherstellen, dass Scrollen weiterhin funktioniert */
+html {
+  overflow: auto;
 }
