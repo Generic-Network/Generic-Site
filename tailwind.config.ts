@@ -12,6 +12,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      screens: {
+        'below-400': { max: '500px' }, // Breakpoint für <400px
+      },
     },
   },
   plugins: [],
