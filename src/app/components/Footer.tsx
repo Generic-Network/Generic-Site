@@ -48,7 +48,7 @@ export default function Footer() {
           <ul className="mt-4 space-y-2 text-neutral-500 dark:text-neutral-400">
             <li><a className="text-sm hover:text-primary-600" href="/shop">Shop</a></li>
             <li><a className="text-sm hover:text-primary-600" href="/games">Spielmodi</a></li>
-            <li><a className="text-sm hover:text-primary-600" href="/infos">Status</a></li>
+            <li><a className="text-sm hover:text-primary-600" href="/infos">Infos</a></li>
             <li><a className="text-sm hover:text-primary-600" href="/blog">Blog</a></li>
           </ul>
         </div>
@@ -64,12 +64,12 @@ export default function Footer() {
         </div>
 
         <div>
-            <h5 className="font-semibold">Support</h5>
+            <h5 className="font-semibold">Sonstiges</h5>
             <ul className="mt-4 space-y-2 text-neutral-500 dark:text-neutral-400">
-              <li><a className="text-sm hover:text-primary-600" href="/changelog">Changelog</a></li>
-              <li><a className="text-sm hover:text-primary-600" href="/faq">FAQ</a></li>
-              <li><a className="text-sm hover:text-primary-600" href="mailto:support@generic-network.xyz">Email</a></li>
-              <li><a className="text-sm hover:text-primary-600" href="generic-network.xyz/discord" target="_blank">Discord</a></li>
+              <li><a className="text-sm hover:text-primary-600" href="/status">Status</a></li>
+              <li><a className="text-sm hover:text-primary-600" href="/services">Services</a></li>
+              <li><a className="text-sm hover:text-primary-600" href="/socials">Socials</a></li>
+              <li><a className="text-sm hover:text-primary-600" href="/" target="_blank">Discord</a></li>
             </ul>
           </div>
         </div>

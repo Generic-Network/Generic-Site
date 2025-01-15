@@ -14,7 +14,7 @@ export default function NavBar() {
             >
               <div className="ml-1 text-2xl font-bold">Generic Network</div>
             </a>
-            <nav className="ml-4 hidden md:block" aria-label="Main menu">
+            <nav className="ml-4  md:block" aria-label="Main menu">
               <nav
                 aria-label="Main"
                 data-orientation="horizontal"
