@@ -1,24 +1,26 @@
-"use client"
+"use client";
 
+import { Home, ShoppingCart, Info, Phone, Settings } from 'lucide-react';
 import React, { useState, useEffect, useRef } from 'react';
-import { Open_Sans, Roboto } from 'next/font/google'
+import { Open_Sans, Roboto } from 'next/font/google';
 
 const roboto = Roboto({
-    subsets: ['latin'],
-    weight: '900'
+  subsets: ['latin'],
+  weight: '900',
 });
 
 const openSans = Open_Sans({
-    subsets: ['latin']
-})
+  subsets: ['latin'],
+});
 
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null);
 
   // Handle click outside
+  // @ts-nocheck
   useEffect(() => {
-    const handleClickOutside = (event:any) => {
+    const handleClickOutside = (event) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
         setIsMenuOpen(false);
       }
@@ -56,17 +58,17 @@ export default function NavBar() {
                     className="group flex flex-1 list-none items-center justify-center space-x-1 text-black/60 dark:text-gray-500"
                     dir="ltr"
                   >
-                    {['Home', 'Shop', 'About Us', 'Contact'].map((item, index) => (
+                    {[{ name: 'Home', href: '/' }, { name: 'Shop',  href: '/shop' }, { name: 'About Us', href: '/aboutus' }, { name: 'Contact', href: '/contact' }].map((item, index) => (
                       <a
-                        key={item}
-                        className={`group inline-flex h-8 w-max items-center justify-center rounded-lg bg-background px-1 text-sm font-medium transition-all duration-300 hover:bg-secondary-300/10 hover: hover:text-accent-foreground hover:font-extrabold disabled:pointer-events-none disabled:opacity-50`}
+                        key={item.name}
+                        className={`group inline-flex h-8 w-max items-center justify-center rounded-lg bg-background px-1 text-sm font-medium transition-all duration-300 hover:bg-secondary-300/10 hover:text-gray-300 hover:text-accent-foreground disabled:pointer-events-none disabled:opacity-50`}
                         style={{
-                        
-                          animation: `slideIn 0.5s ease-out ${index * 0.1}s forwards`
+                          animation: `slideIn 0.5s ease-out ${index * 0.1}s forwards`,
                         }}
-                        href="#"
+                        href={item.href}
                       >
-                        {item}
+                        <span className="mr-2">{item.icon}</span>
+                        {item.name}
                       </a>
                     ))}
                   </ul>
@@ -74,16 +76,11 @@ export default function NavBar() {
               </nav>
             </nav>
           </div>
-          <div className="hidden space-x-4 lg:flex">
-            <button className="inline-flex items-center gap-2 justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary-700 text-white-main hover:bg-primary-800 dark:hover:bg-primary-600 hover:shadow-sm py-2 h-8 rounded-lg px-3 bg-slate-100 text-black">
-              Lege los!
-            </button>
-            
-          </div>
+          <div className="hidden space-x-4 lg:flex"></div>
           <div className="">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center gap-2 justify-center whitespace-nowrap text-sm font-medium color ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-10 w-10 rounded-md hover:bg-secondary-300/10 "
+              className="inline-flex items-center gap-2 justify-center whitespace-nowrap text-sm font-medium color ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-10 w-10 rounded-md hover:bg-secondary-300/10"
               aria-label="Open menu"
               type="button"
               aria-haspopup="dialog"
@@ -109,10 +106,10 @@ export default function NavBar() {
           </div>
         </div>
 
-        {/* Mobile Menu Panel */}
+        {/* Modal Panel */}
         <div
           ref={menuRef}
-          className={`fixed inset-y-0 right-0 w-64 bg-white shadow-2xl transform transition-transform duration-300 ease-in-out lg:hidden ${
+          className={`fixed inset-y-0 right-0 w-64 bg-white shadow-2xl transform transition-transform duration-300 ease-in-out ${
             isMenuOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
         >
@@ -137,63 +134,30 @@ export default function NavBar() {
             </svg>
           </button>
 
-          <div className="p-6 pt-16">
-            <ul className="space-y-4 list-disc pl-6"> {/* Punkte aktiviert mit list-disc */}
-              <li
-                style={{
-                  opacity: 0,
-                  animation: isMenuOpen ? `slideIn 0.5s ease-out 0s forwards` : 'none',
-                }}
-              >
-                <a
-                  href="/"
-                  className="text-lg font-medium text-gray-600 transition-all duration-300 hover:text-black hover:text-[2rem] hover:font-semibold"
-                >
-                  Home
-                </a>
-              </li>
-              <li
-                style={{
-                  opacity: 0,
-                  animation: isMenuOpen ? `slideIn 0.5s ease-out 0.1s forwards` : 'none',
-                }}
-              >
-                <a
-                  href="/shop"
-                  className="text-lg font-medium text-gray-600 transition-all duration-300 hover:text-black hover:text-[2rem] hover:font-semibold"
-                >
-                  Shop
-                </a>
-              </li>
-              <li
-                style={{
-                  opacity: 0,
-                  animation: isMenuOpen ? `slideIn 0.5s ease-out 0.2s forwards` : 'none',
-                }}
-              >
-                <a
-                  href="/aboutus"
-                  className="text-lg font-medium text-gray-600 transition-all duration-300 hover:text-black hover:text-[2rem] hover:font-semibold"
-                >
-                  About Us
-                </a>
-              </li>
-              <li
-                style={{
-                  opacity: 0,
-                  animation: isMenuOpen ? `slideIn 0.5s ease-out 0.3s forwards` : 'none',
-                }}
-              >
-                <a
-                  href="/contact"
-                  className="text-lg font-medium text-gray-600 transition-all duration-300 hover:text-black hover:text-[2rem] hover:font-semibold"
-                >
-                  Contact
-                </a>
-              </li>
+          <div className="p-6 pt-16 flex flex-col justify-between h-full">
+            <ul className="space-y-4 list-disc pl-6">
+              {[{ name: 'Home', icon: <Home />, href: '/' }, { name: 'Shop', icon: <ShoppingCart />, href: '/shop' }, { name: 'About Us', icon: <Info />, href: '/aboutus' }, { name: 'Contact', icon: <Phone />, href: '/contact' }].map((item) => (
+                <li key={item.name}>
+                  <a
+                    href={item.href}
+                    className="text-lg font-medium text-gray-600 transition-all duration-300 hover:text-black hover:text-[1.3rem] hover:font-semibold flex items-center"
+                  >
+                    <span className="mr-2">{item.icon}</span>
+                    {item.name}
+                  </a>
+                </li>
+              ))}
             </ul>
+            <div className="mt-auto">
+              <a
+                href="/settings"
+                className="text-lg font-medium text-gray-600 transition-all duration-300 hover:text-black hover:text-[1.3rem] hover:font-semibold flex items-center"
+              >
+                <span className="mr-2">{<Settings />}</span>
+                Settings
+              </a>
+            </div>
           </div>
-
         </div>
       </nav>
 

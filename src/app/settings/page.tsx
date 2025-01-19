@@ -1,10 +1,7 @@
-import Footer from "../../components/Footer";
-import NavBar from "../../components/NavBar";
+import Footer from "../components/Footer";
+import NavBar from "../components/NavBar";
 
-
-
-
-export default function home(){
+export default function infos(){
   return (
     <>
       <div className="flex flex-col justify-between h-screen m-0">
