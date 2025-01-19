@@ -1,6 +1,15 @@
 import { Open_Sans } from 'next/font/google';
+import localFont from 'next/font/local';
+
+const nexaBlack = localFont({
+  src: '../../../public/fonts/nexa-black.otf',
+  variable: '--font-nexa-black', // CSS-Variable für Tailwind
+});
+
+
 
 const openSans = Open_Sans({ subsets: ['latin'], weight: ["800"] });
+
 
 export default function Footer() {
   const links = [
@@ -21,12 +30,12 @@ export default function Footer() {
 
   return (
     <>
-    <div className="mx-auto mt-40 w-full max-w-screen-xl px-4 sm:px-6 static bottom-0">
+    <div className={`mx-auto mt-40 w-full max-w-screen-xl px-4 sm:px-6 static bottom-0 ${nexaBlack.className}`}>
       <div className="grid grid-cols-2 gap-x-2 gap-y-8 pb-12 sm:grid-cols-4 sm:gap-6 xl:grid-cols-7">
         
         <div className="col-span-full mb-2 sm:mb-8 xl:col-span-2 xl:mb-0">
           <a className="-ml-1 inline-block" href="/">
-            <h1 className={`text-white ${openSans.className}`}>GN</h1>
+            <h1 className={`text-black font-extrabold ${nexaBlack.className}`}>Generic Network</h1>
           </a>
           <p className="mt-5 text-sm leading-[1.75] text-neutral-500 dark:text-neutral-400">
             Spiel einfach ungestört auf unsere Minecraft-Server.
@@ -35,7 +44,7 @@ export default function Footer() {
 
         <div>
           <h5 className="font-semibold">Unternehmen</h5>
-          <ul className="mt-4 space-y-2 text-neutral-500 dark:text-neutral-400">
+          <ul className={`mt-4 space-y-2 text-neutral-500 dark:text-neutral-400`}>
             <li><a className="text-sm hover:text-primary-600" href="/aboutus">Über uns</a></li>
             <li><a className="text-sm hover:text-primary-600" href="/rechtliches/privacy">Privatsphäre Richtlinien</a></li>
             <li><a className="text-sm hover:text-primary-600" href="/rechtliches/agb">AGB</a></li>
@@ -78,7 +87,7 @@ export default function Footer() {
       
 
 
-      <div className="flex flex-col items-center justify-center gap-2.5 border-t py-3.5 text-neutral-500 dark:text-neutral-400 sm:flex-row-reverse">
+      <div className="flex flex-col items-center justify-center gap-2.5 border-t border-black py-3.5 text-neutral-500 dark:text-neutral-400 sm:flex-row-reverse">
         <div className="-mr-2 flex items-center gap-1">
           
         </div>

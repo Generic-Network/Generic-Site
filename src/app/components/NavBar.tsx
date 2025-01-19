@@ -3,6 +3,13 @@
 import { Home, ShoppingCart, Info, Phone, Settings } from 'lucide-react';
 import React, { useState, useEffect, useRef } from 'react';
 import { Open_Sans, Roboto } from 'next/font/google';
+import localFont from 'next/font/local';
+
+const nexaBlack = localFont({
+  src: '../../../public/fonts/nexa-black.otf',
+  variable: '--font-nexa-black', // CSS-Variable für Tailwind
+});
+
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -20,7 +27,7 @@ export default function NavBar() {
   // Handle click outside
   // @ts-nocheck
   useEffect(() => {
-    const handleClickOutside = (event) => {
+    const handleClickOutside = (event:any) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
         setIsMenuOpen(false);
       }
@@ -33,7 +40,7 @@ export default function NavBar() {
   return (
     <>
       <nav
-        className="rounded-2xl border-[1.5px] border-gray-200 bg-background px-2 transition-all mt-5 duration-300 ease-in-out dark:border-gray-500 p-1 mx-8 lg:mx-20 max-w-[1024px]:mx-20"
+        className={`rounded-2xl border-[1.5px] border-gray-200 bg-background px-2 transition-all mt-5 duration-300 ease-in-out dark:border-gray-500 p-1 mx-8 bg-black text-gray-200 lg:mx-20 max-w-[1024px]:mx-20 bg-opacity-50 ${nexaBlack.className}`} 
         aria-label="Main navigation"
       >
         <div className="flex h-12 items-center justify-between">
@@ -43,7 +50,7 @@ export default function NavBar() {
               aria-label="Generic Network Home"
               href="/"
             >
-              <div className="ml-1 text-2xl font-bold animate-slideIn">Generic Network</div>
+              <div className={`ml-1 text-2xl font-bold animate-slideIn ${nexaBlack.className} text-gray-100`}>Generic Network</div>
             </a>
             <nav className="ml-4 block below-400:hidden" aria-label="Main menu">
               <nav
@@ -55,13 +62,13 @@ export default function NavBar() {
                 <div className="relative">
                   <ul
                     data-orientation="horizontal"
-                    className="group flex flex-1 list-none items-center justify-center space-x-1 text-black/60 dark:text-gray-500"
+                    className="group flex flex-1 list-none items-center justify-center space-x-1 "
                     dir="ltr"
                   >
                     {[{ name: 'Home', href: '/' }, { name: 'Shop',  href: '/shop' }, { name: 'About Us', href: '/aboutus' }, { name: 'Contact', href: '/contact' }].map((item, index) => (
                       <a
                         key={item.name}
-                        className={`group inline-flex h-8 w-max items-center justify-center rounded-lg bg-background px-1 text-sm font-medium transition-all duration-300 hover:bg-secondary-300/10 hover:text-gray-300 hover:text-accent-foreground disabled:pointer-events-none disabled:opacity-50`}
+                        className={`group inline-flex h-8 w-max items-center justify-center rounded-lg px-1 text-sm font-medium transition-all duration-300 hover:bg-secondary-300/10 hover:text-gray-300 hover:text-accent-foreground disabled:pointer-events-none disabled:opacity-50`}
                         style={{
                           animation: `slideIn 0.5s ease-out ${index * 0.1}s forwards`,
                         }}

@@ -7,7 +7,7 @@ export default function home(){
   return (
     <>
       <div className="flex flex-col justify-between h-screen m-0">
-        <nav className="">
+        <nav className="sticky top-0 z-50">
           <NavBar>
           </NavBar>
         </nav>
