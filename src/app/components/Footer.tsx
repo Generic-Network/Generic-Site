@@ -29,8 +29,13 @@ export default function Footer() {
 
 
   return (
+
+
     <>
-    <div className={`mx-auto mt-40 w-full max-w-screen-xl px-4 sm:px-6 static bottom-0 ${nexaBlack.className}`}>
+    
+      <div className={`mx-auto mt-40 w-full max-w-screen-xl px-4 sm:px-6 static bottom-0 ${nexaBlack.className}`}>
+         
+      
       <div className="grid grid-cols-2 gap-x-2 gap-y-8 pb-12 sm:grid-cols-4 sm:gap-6 xl:grid-cols-7">
         
         <div className="col-span-full mb-2 sm:mb-8 xl:col-span-2 xl:mb-0">

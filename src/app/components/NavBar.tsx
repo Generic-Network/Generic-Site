@@ -68,7 +68,7 @@ export default function NavBar() {
                     {[{ name: 'Home', href: '/' }, { name: 'Shop',  href: '/shop' }, { name: 'About Us', href: '/aboutus' }, { name: 'Contact', href: '/contact' }].map((item, index) => (
                       <a
                         key={item.name}
-                        className={`group inline-flex h-8 w-max items-center justify-center rounded-lg px-1 text-sm font-medium transition-all duration-300 hover:bg-secondary-300/10 hover:text-gray-300 hover:text-accent-foreground disabled:pointer-events-none disabled:opacity-50`}
+                        className={`group inline-flex h-8 w-max items-center justify-center rounded-lg px-1 text-sm font-medium transition-all duration-300 hover:bg-secondary-300/10 hover:text-white hover:text-accent-foreground disabled:pointer-events-none disabled:opacity-50`}
                         style={{
                           animation: `slideIn 0.5s ease-out ${index * 0.1}s forwards`,
                         }}
