@@ -3,6 +3,12 @@ import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import localFont from 'next/font/local';
+
+const nexaBlack = localFont({
+  src: '../../public/fonts/nexa-black.otf',
+  variable: '--font-nexa-black', // CSS-Variable für Tailwind
+});
 
 export default function Homepage() {
   const [bubbles, setBubbles] = useState([]);
@@ -62,17 +68,17 @@ export default function Homepage() {
       </div>
 
       {/* Hero Section */}
-      <div className="h-screen relative overflow-hidden">
+      <div className={`h-screen relative overflow-hidden ${nexaBlack.className}`}>
         <div className="absolute inset-0 bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400" />
-        <div className="relative z-10 container mx-auto px-4 h-full flex items-center">
+        <div className="relative z-10 container mx-auto px-4 h-full flex items-center ">
           <div className="max-w-3xl">
             <motion.h1
-              className="text-6xl font-bold text-white mb-6"
+              className="text-6xl font-bold text-white mb-6 xl:text-[8rem]"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              Transform Your Development Experience
+              Generic Network
             </motion.h1>
             <motion.p
               className="text-xl text-white/90 mb-8"
@@ -80,8 +86,7 @@ export default function Homepage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Spiel einfach und unkompliziert auf unserem <a href="">Minecraft-Server</a> mit exelenter Performance, wunderbarer Community und einem hilfsbereitem Team.
             </motion.p>
             <motion.button
               className="bg-white text-purple-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-opacity-90 transition-all"
