@@ -136,20 +136,22 @@ export default function Homepage() {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white p-6 rounded-lg shadow-xl flex flex-col md:flex-row items-center">
+      <div className={`container mx-auto px-4 py-24 ${nexaBlack.className}`}>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
+          <div className="bg-white p-6 rounded-lg shadow-xl flex flex-col md:flex-row items-center  transition-all duration-300 cubic-bezier(.15,1.92,.96,.29) transform hover:scale-[1.1]">
             <img
-              src="https://picsum.photos/500"
+              src="https://picsum.photos/250"
               alt="placeholder"
               className="w-30 h-30 md:w-30 md:h-30 object-cover rounded-lg mb-4 md:mb-0 md:mr-4"
             />
             <div>
-              <h3 className="text-xl font-bold mb-2">Smart Completions</h3>
-              <p className="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <h3 className="text-xl font-bold mb-2">Spaßige Spielmodie</h3>
+              <p className="text-gray-600 transition-all cubic-bezier(.15,1.92,.96,.29)">Spiele spaßige und kompeditieve Spiele mit deinen Freunden oder alleine</p>
+              <br />
+              <a href="/games" className='underline text-blue-500'>Lerne mehr!</a>
             </div>
           </div>
-          <div className="p-6 rounded-lg shadow-xl flex flex-col md:flex-row items-center">
+          <div className="p-6 rounded-lg shadow-xl flex flex-col md:flex-row items-center  transition-all cubic-bezier(.15,1.92,.96,.29) transform hover:scale-[1.1]">
             <img
               src="https://via.placeholder.com/150"
               alt="placeholder"
@@ -160,7 +162,7 @@ export default function Homepage() {
               <p className="text-gray-400">Ut enim ad minim veniam, quis nostrud exercitation.</p>
             </div>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-xl flex flex-col md:flex-row items-center">
+          <div className="bg-white p-6 rounded-lg shadow-xl flex flex-col md:flex-row items-center  transition-all cubic-bezier(.15,1.92,.96,.29) transform hover:scale-[1.1]">
             <img
               src="https://via.placeholder.com/150"
               alt="placeholder"
