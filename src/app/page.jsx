@@ -178,12 +178,19 @@ export default function Homepage() {
               </div>
             </div>
           </div>
-          <div className='mt-10'>
+          <div className='mt-10 container'>
             <div className='p-4'>
               <h1 className='text-[1.5rem]'>Server Status</h1>
               <h3 className='font-sans font-bold'>Der Status aller wichtigen Server</h3>
             </div>
 
+            <div className='grid grid-cols-1 gap-4'>
+                <div className="mcss py-[7rem] mx-40 rounded-2xl bg-slate-200 flex">
+                  <h1 className=''>Minecraft Server</h1>
+                </div>
+                <div className="wbss py-[7rem] mx-40 rounded-2xl bg-slate-200"></div>
+                <div className="dbss py-[7rem] mx-40 rounded-2xl bg-slate-200"></div>
+            </div>
           </div>
         </div>
 
