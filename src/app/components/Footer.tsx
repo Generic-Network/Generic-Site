@@ -36,10 +36,10 @@ export default function Footer() {
         <div>
           <h5 className="font-semibold">Unternehmen</h5>
           <ul className="mt-4 space-y-2 text-neutral-500 dark:text-neutral-400">
-            <li><a className="text-sm hover:text-primary-600" href="/about">Über uns</a></li>
-            <li><a className="text-sm hover:text-primary-600" href="/privacy">Privatsphäre Richtlinien</a></li>
-            <li><a className="text-sm hover:text-primary-600" href="/agb">AGB</a></li>
-            <li><a className="text-sm hover:text-primary-600" href="/impressum">Impressum</a></li>
+            <li><a className="text-sm hover:text-primary-600" href="/aboutus">Über uns</a></li>
+            <li><a className="text-sm hover:text-primary-600" href="/rechtliches/privacy">Privatsphäre Richtlinien</a></li>
+            <li><a className="text-sm hover:text-primary-600" href="/rechtliches/agb">AGB</a></li>
+            <li><a className="text-sm hover:text-primary-600" href="/rechtliches/impressum">Impressum</a></li>
           </ul>
         </div>
 
@@ -69,7 +69,7 @@ export default function Footer() {
               <li><a className="text-sm hover:text-primary-600" href="/status">Status</a></li>
               <li><a className="text-sm hover:text-primary-600" href="/services">Services</a></li>
               <li><a className="text-sm hover:text-primary-600" href="/socials">Socials</a></li>
-              <li><a className="text-sm hover:text-primary-600" href="/" target="_blank">Discord</a></li>
+              <li><a className="text-sm hover:text-primary-600" href="/" target="_blank">AJSDLAJSDKL</a></li>
             </ul>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 
-export default function discord(){
+export default function shop(){
   return (
     <>
       <div className="flex flex-col justify-between h-screen m-0">

@@ -74,36 +74,20 @@ export default function NavBar() {
               </nav>
             </nav>
           </div>
-          <div className="hidden items-center space-x-4 lg:flex">
+          <div className="hidden space-x-4 lg:flex">
             <button className="inline-flex items-center gap-2 justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary-700 text-white-main hover:bg-primary-800 dark:hover:bg-primary-600 hover:shadow-sm py-2 h-8 rounded-lg px-3 bg-slate-100 text-black">
               Lege los!
             </button>
-            <div className="flex h-9 w-9 items-center justify-center duration-200">
-              <label className="flex h-full w-full cursor-pointer items-center justify-center rounded-full border border-gray-600/50 duration-200 hover:bg-gray-400/20">
-                <input className="hidden" type="checkbox" />
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="lucide lucide-moon-star h-5 w-5"
-                >
-                  <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9"></path>
-                  <path d="M20 3v4"></path>
-                  <path d="M22 5h-4"></path>
-                </svg>
-              </label>
-            </div>
+            
           </div>
-          <div className="lg:hidden">
+          <div className="">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
+
               className="inline-flex items-center gap-2 justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-10 w-10 rounded-md hover:bg-secondary-300/10"
+
+             
+
               aria-label="Open menu"
               type="button"
               aria-haspopup="dialog"
@@ -139,7 +123,10 @@ export default function NavBar() {
           {/* Close Button */}
           <button
             onClick={() => setIsMenuOpen(false)}
+
             className="absolute top-4 right-4 p-2 rounded-full hover:bg-gray-100 transition-all duration-300"
+
+           
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
