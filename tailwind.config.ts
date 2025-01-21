@@ -8,12 +8,16 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Helvetica', 'Arial', 'sans-serif'], // Standard-Schriftart auf Helvetica setzen
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
       screens: {
-        'below-400': { max: '500px' }, // Breakpoint für <400px
+        'below-400': { max: '500px' },
+         // Breakpoint für <400px
       },
     },
   },
