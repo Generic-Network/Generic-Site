@@ -105,7 +105,7 @@ export default function Homepage() {
           </div>
         </div>
 
-        <div className="relative z-10 container mx-auto px-4 h-full flex items-center">
+        <div className="relative z-10 container mx-auto h-full flex items-center absolute-text">
           <div className="max-w-3xl">
             <motion.h1
               className="text-6xl font-bold text-white mb-6 xl:text-[8rem]"

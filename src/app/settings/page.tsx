@@ -10,7 +10,7 @@ export default function infos(){
           </NavBar>
         </nav>
         <main>
-
+            <p>settings</p>
         </main>
         <footer className="static bottom-0 h-8">
           <Footer></Footer>
