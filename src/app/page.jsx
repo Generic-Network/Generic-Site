@@ -138,21 +138,39 @@ export default function Homepage() {
 
       <div className="container mx-auto px-4 py-24">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <FeatureCard
-            title="Smart Completions"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            imageUrl="https://via.placeholder.com/150"
-          />
-          <FeatureCard
-            title="Real-time Collaboration"
-            description="Ut enim ad minim veniam, quis nostrud exercitation."
-            imageUrl="https://via.placeholder.com/150"
-          />
-          <FeatureCard
-            title="Advanced AI"
-            description="Duis aute irure dolor in reprehenderit in voluptate."
-            imageUrl="https://via.placeholder.com/150"
-          />
+          <div className="bg-white p-6 rounded-lg shadow-xl flex flex-col md:flex-row items-center">
+            <img
+              src="https://picsum.photos/500"
+              alt="placeholder"
+              className="w-30 h-30 md:w-30 md:h-30 object-cover rounded-lg mb-4 md:mb-0 md:mr-4"
+            />
+            <div>
+              <h3 className="text-xl font-bold mb-2">Smart Completions</h3>
+              <p className="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+          <div className="p-6 rounded-lg shadow-xl flex flex-col md:flex-row items-center">
+            <img
+              src="https://via.placeholder.com/150"
+              alt="placeholder"
+              className="w-24 h-24 md:w-32 md:h-32 object-cover rounded-lg mb-4 md:mb-0 md:mr-4"
+            />
+            <div>
+              <h3 className="text-xl font-bold mb-2 text-white">Real-time Collaboration</h3>
+              <p className="text-gray-400">Ut enim ad minim veniam, quis nostrud exercitation.</p>
+            </div>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-xl flex flex-col md:flex-row items-center">
+            <img
+              src="https://via.placeholder.com/150"
+              alt="placeholder"
+              className="w-24 h-24 md:w-32 md:h-32 object-cover rounded-lg mb-4 md:mb-0 md:mr-4"
+            />
+            <div>
+              <h3 className="text-xl font-bold mb-2">Advanced AI</h3>
+              <p className="text-gray-600">Duis aute irure dolor in reprehenderit in voluptate.</p>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -162,24 +180,3 @@ export default function Homepage() {
     </div>
   );
 }
-
-const FeatureCard = ({ title, description, imageUrl }) => (
-  <motion.div
-    className="bg-white p-6 rounded-lg shadow-xl flex flex-col md:flex-row items-center"
-    initial={{ opacity: 0, y: 50 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    whileHover={{ scale: 1.05 }}
-    transition={{ duration: 0.4 }}
-  >
-    <img
-      src={imageUrl}
-      alt="placeholder"
-      className="w-24 h-24 md:w-32 md:h-32 object-cover rounded-lg mb-4 md:mb-0 md:mr-4"
-    />
-    <div>
-      <h3 className="text-xl font-bold mb-2">{title}</h3>
-      <p className="text-gray-600">{description}</p>
-    </div>
-  </motion.div>
-);

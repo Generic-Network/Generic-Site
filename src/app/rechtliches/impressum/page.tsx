@@ -16,7 +16,7 @@ export default function home(){
         
 
 
-            <div className="bg-black text-white p-8 min-h-screen font-sans">
+            <div className="p-8 min-h-screen font-sans">
             <div className="max-w-4xl mx-auto">
                 {/* Impressum Section */}
                 <h1 className="text-4xl font-extrabold font-helvetica mb-8">Impressum</h1>
