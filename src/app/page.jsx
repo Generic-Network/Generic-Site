@@ -185,11 +185,11 @@ export default function Homepage() {
             </div>
 
             <div className='grid grid-cols-1 gap-4'>
-                <div className="mcss py-[7rem] mx-40 rounded-2xl bg-slate-200 flex">
-                  <h1 className=''>Minecraft Server</h1>
+                <div className="mcss h-[14rem] xl:mx-40 rounded-2xl text-center justify-center bg-slate-200 flex">
+                  <h1 className='pt-4 text-[1.3rem]'>Minecraft Server</h1>
                 </div>
-                <div className="wbss py-[7rem] mx-40 rounded-2xl bg-slate-200"></div>
-                <div className="dbss py-[7rem] mx-40 rounded-2xl bg-slate-200"></div>
+                <div className="wbss py-[7rem] xl:mx-40 rounded-2xl bg-slate-200"></div>
+                <div className="dbss py-[7rem] xl:mx-40 rounded-2xl bg-slate-200"></div>
             </div>
           </div>
         </div>

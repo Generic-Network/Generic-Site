@@ -71,17 +71,18 @@ export default function NavBar() {
                     dir="ltr"
                   >
                     {menuItems.map((item, index) => (
+                      
                       <a
-                        key={item.name}
-                        className={`group inline-flex h-8 w-max items-center justify-center rounded-lg px-1 text-sm font-medium transition-all duration-300 hover:bg-secondary-300/10 hover:text-white hover:text-accent-foreground disabled:pointer-events-none disabled:opacity-50`}
-                        style={{
-                          animation: `slideIn 0.5s ease-out ${index * 0.1}s forwards`,
-                        }}
-                        href={item.href}
-                      >
-                        <span className="mr-2">{item.icon}</span>
-                        {item.name}
-                      </a>
+                      key={item.name}
+                      href={item.href}
+                      className="group inline-flex h-8 w-max items-center justify-center rounded-lg px-1 text-sm font-medium transition-all duration-300 hover:bg-secondary-300/10 hover:text-white hover:text-accent-foreground"
+                      style={{
+                        animation: `slideIn 0.5s ease-out ${index * 0.1}s forwards`,
+                      }}
+                    >
+                      <span className="mr-2">{item.icon}</span>
+                      {item.name}
+                    </a>
                     ))}
                   </ul>
                 </div>
