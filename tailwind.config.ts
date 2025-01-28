@@ -16,7 +16,10 @@ export default {
         foreground: "var(--foreground)",
       },
       screens: {
-        'below-400': { max: '500px' },
+        'below-700': {max: "700px"},
+        'below-1000': { max: '1000px' },
+        'below-800': { max: '800px'},
+        'below-400': { max: '400px' },
          // Breakpoint für <400px
       },
     },

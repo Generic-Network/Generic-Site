@@ -96,7 +96,8 @@ export default function Footer() {
         <div className="-mr-2 flex items-center gap-1">
           
         </div>
-        <span className="text-sm">© 2025 Generic Network Holding GmbH & CO KG - Alle Rechte vorbehalten.</span>
+        <span className='below-400:hidden'>Wir sind in keiner Weise mit Mojang verbunden </span>
+        <span className="text-sm">© 2025 Generic Network UG - Alle Rechte vorbehalten.</span>
       </div>
 
     </>
