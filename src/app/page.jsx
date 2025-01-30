@@ -4,7 +4,10 @@ import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import JoinNow from './components/JoinNow'
+import Carousel from "./components/Carousel"
 import localFont from 'next/font/local';
+
 
 
 const nexaBlack = localFont({
@@ -79,7 +82,7 @@ export default function Homepage() {
   const { bubbles, mousePosition } = useBackgroundBubbles();
 
   return (
-    <div className="">
+    <>
       <nav className="z-50 top-0 absolute w-full">
         <NavBar></NavBar>
       </nav>
@@ -194,21 +197,28 @@ export default function Homepage() {
             </div>
           </div>
           </div>
-          </div>
+          
       </main>
-          
-          
-          
-        
-
-        
-
   
+          
+      
+          
+        
+
+      <div className='mx-40'>
+
+      <JoinNow />
+      </div>
+  
+      <div className='mx-40'>
+
+      <Carousel />
+      </div>
 
     
      <footer>
       <Footer></Footer>
      </footer>
-    
+     </>
   );
 }

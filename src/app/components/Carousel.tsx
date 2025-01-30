@@ -1,82 +1,36 @@
-import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import "./css/Carousel.scss"
 
-const gameModes = [
-  {
-    id: 'bedwars',
-    name: 'Bedwars',
-    icon: '🛏️',
-    description: 'Erstelle eine riesige Insel aus einem einzigen Block und beteilige dich am Handel mit anderen Spielern.'
-  },
-  {
-    id: 'oneblock',
-    name: 'Oneblock',
-    icon: '🧊',
-    description: 'Erstelle eine riesige Insel aus einem einzigen Block und beteilige dich am Handel mit anderen Spielern.'
-  },
-  {
-    id: 'fastbuilders',
-    name: 'FastBuilders',
-    icon: '🏗️',
-    description: 'Erstelle eine riesige Insel aus einem einzigen Block und beteilige dich am Handel mit anderen Spielern.'
-  }
-];
-
-export default function GameModeCarousel() {
-  const [currentIndex, setCurrentIndex] = useState(1);
-
-  const handlePrevious = () => {
-    setCurrentIndex((prev) => (prev === 0 ? gameModes.length - 1 : prev - 1));
-  };
-
-  const handleNext = () => {
-    setCurrentIndex((prev) => (prev === gameModes.length - 1 ? 0 : prev + 1));
-  };
-
-  return (
-    <div className="relative pl-6 p-14 rounded-2xl text-center text-gray-600 bg-gray-100 justify-center shadow-md transition-all ease-linear hover:shadow-xl">
-      <h1 className="text-[1.7rem] ml-6 text-3xl">
-        Welche <span className="text-purple-600">Spielmodi</span> bieten wir dir an?
-      </h1>
-      <h3 className="text-gray-800 font-sans font-semibold text-[1.4rem] below-800:text-[1.1rem]">
-        Wir bieten dir viele verschiedene Spielmodi, die alle etwas besonderes haben und Spaß mitbringen
-      </h3>
-
-      <div className="flex items-center justify-center gap-4 mt-8">
-        <button 
-          onClick={handlePrevious}
-          className="p-2 rounded-full hover:bg-gray-200 transition-colors"
-        >
-          <ChevronLeft size={24} />
-        </button>
-
-        <div className="flex gap-4 items-center justify-center">
-          {gameModes.map((mode, index) => (
-            <div
-              key={mode.id}
-              className={`
-                transition-all duration-300 transform
-                ${index === currentIndex ? 'bg-purple-600 text-white scale-105' : 'bg-white scale-95 opacity-70'}
-                rounded-lg p-4 flex items-center gap-3 w-64 shadow-md hover:shadow-xl
-              `}
-            >
-              <span className="text-2xl">{mode.icon}</span>
-              <span className="font-bold">{mode.name}</span>
-            </div>
-          ))}
-        </div>
-
-        <button 
-          onClick={handleNext}
-          className="p-2 rounded-full hover:bg-gray-200 transition-colors"
-        >
-          <ChevronRight size={24} />
-        </button>
-      </div>
-
-      <p className="text-gray-800 font-sans font-semibold text-[1.4rem] below-800:text-[1.1rem] mt-8">
-        {gameModes[currentIndex].description}
-      </p>
+export default function Carousel() {
+  return(
+    <>
+    <div className="mode-preview-card text-center font-sans">
+    <div className="text-3xl font-bold flex justify-center">
+        Welche <span className="text-orange-600 ml-1">Spielmodi</span> bieten wir dir an?
     </div>
-  );
+    <div className="text-lg mt-2">
+        Wir bieten dir viele verschiedene Spielmodi, die alle etwas Besonderes haben und Spaß mitbringen
+    </div>
+    <div className="flex overflow-x-auto gap-4 mt-5 p-3">
+        {[
+            { src: "https://assets.twerion.net/website/Red_Bed.webp", alt: "Bedwars", name: "Bedwars" },
+            { src: "https://assets.twerion.net/website/Bedrock_JE2_BE2.webp", alt: "Oneblock", name: "Oneblock" },
+            { src: "https://assets.twerion.net/website/Sandstone_JE6_BE3.webp", alt: "FastBuilders", name: "FastBuilders" },
+            { src: "", alt: "CityBuild SMP", name: "CityBuild SMP" },
+            { src: "https://assets.twerion.net/website/Feather_JE3_BE2.webp", alt: "SkyPVP", name: "SkyPVP" },
+            { src: "https://assets.twerion.net/website/Stick_JE1_BE1.webp", alt: "Practice", name: "Practice" },
+            { src: "https://assets.twerion.net/website/Diamond_Sword_JE3_BE3.webp", alt: "Lifesteal SMP", name: "Lifesteal SMP" },
+            { src: "https://assets.twerion.net/website/Fishing_Rod_JE2_BE2.webp", alt: "BuildFFA", name: "BuildFFA" },
+            { src: "https://assets.twerion.net/website/Golden_Apple_JE2_BE2.webp", alt: "OPPvP", name: "OPPvP" }
+        ].map((mode, index) => (
+            <div key={index} className="flex flex-col items-center min-w-[100px]">
+                <img className="w-12 h-12 object-contain" src={mode.src} alt={mode.alt} />
+                <div className="mt-2 text-sm font-medium">{mode.name}</div>
+            </div>
+        ))}
+    </div>
+</div>
+
+
+    </>
+  )
 }
