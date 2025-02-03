@@ -24,7 +24,7 @@ export default function home(){
                 <p className="mb-6">Informationen über den Diensteanbieter.</p>
                 
                 <div className="mb-8">
-                <p className="font-bold">Generic Network UG ig. (haftungsbeschränkt)</p>
+                <p className="font-bold">Generic Network UG i. Gr. (haftungsbeschränkt)</p>
                 <p>
                     Huderstraße 15<br />
                     21357 Bardowick,<br />

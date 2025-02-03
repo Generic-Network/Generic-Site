@@ -21,25 +21,15 @@ const openSans = Open_Sans({
 
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const menuRef = useRef<HTMLDivElement>(null); // Typisierung angepasst
+  const menuRef = useRef(null); // Typisierung angepasst
 
   // Handle click outside
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
-        setIsMenuOpen(false);
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
-
+ 
   const menuItems = [
-    { name: 'Home', href: '/', icon: <Home /> },
-    { name: 'Shop', href: '/shop', icon: <ShoppingCart /> },
-    { name: 'About Us', href: '/aboutus', icon: <Info /> },
-    { name: 'Contact', href: '/contact', icon: <Phone /> },
+    { name: 'Home', href: '/'},
+    { name: 'Shop', href: '/shop'},
+    { name: 'About Us', href: '/aboutus'},
+    { name: 'Contact', href: '/contact'},
   ];
 
   return (
@@ -79,7 +69,7 @@ export default function NavBar() {
                         }}
                         href={item.href}
                       >
-                        <span className="mr-2">{item.icon}</span>
+                        <span className="mr-2"></span>
                         {item.name}
                       </a>
                     ))}
@@ -90,11 +80,13 @@ export default function NavBar() {
           </div>
           <div className="hidden space-x-4 lg:flex"></div>
           <div className="">
+            {/* diesen button meine ich keinen anderen aenderenichts anderes kein css oder sowas nur das */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center gap-2 justify-center whitespace-nowrap text-sm font-medium color ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-10 w-10 rounded-md hover:bg-secondary-300/10 "
+              className="inline-flex items-center gap-2 enabled justify-center whitespace-nowrap text-sm font-medium color transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 hover:text-accent-foreground h-10 w-10 rounded-md hover:bg-secondary-300/10 "
               aria-label="Open menu"
               type="button"
+              
               aria-haspopup="dialog"
               aria-expanded={isMenuOpen}
             >
