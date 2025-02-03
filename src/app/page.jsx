@@ -4,7 +4,11 @@ import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import JoinNow from './components/JoinNow'
+import Carousel from "./components/Carousel"
 import localFont from 'next/font/local';
+
+
 
 const nexaBlack = localFont({
   src: '../../public/fonts/nexa-black.otf',
@@ -78,11 +82,11 @@ export default function Homepage() {
   const { bubbles, mousePosition } = useBackgroundBubbles();
 
   return (
-    <div className="relative min-h-screen bg-white">
-      <nav className="absolute z-50 w-full">
-        <NavBar />
+    <>
+      <nav className="z-50 top-0 absolute w-full">
+        <NavBar></NavBar>
       </nav>
-      <main>
+      <main className=''>
         <div className={`h-screen relative overflow-hidden ${nexaBlack.className}`}>
           <div className='gradient-bg'>
             <div className="absolute inset-0 bg-gradient-to-br from-gray-600 via-gray-500 to-gray-500 opacity-45" />
@@ -185,19 +189,36 @@ export default function Homepage() {
             </div>
 
             <div className='grid grid-cols-1 gap-4'>
-                <div className="mcss py-[7rem] mx-40 rounded-2xl bg-slate-200 flex">
-                  <h1 className=''>Minecraft Server</h1>
+                <div className="mcss p-10 xl:mx-40 rounded-2xl text-center justify-center bg-slate-200 flex">
+                  <h1 className='pt-4 text-[1.3rem]'>Minecraft Server</h1>
                 </div>
-                <div className="wbss py-[7rem] mx-40 rounded-2xl bg-slate-200"></div>
-                <div className="dbss py-[7rem] mx-40 rounded-2xl bg-slate-200"></div>
+                <div className="wbss py-[7rem] xl:mx-40 rounded-2xl bg-slate-200"></div>
+                <div className="dbss py-[7rem] xl:mx-40 rounded-2xl bg-slate-200"></div>
             </div>
           </div>
-        </div>
-
+          </div>
+          
       </main>
-      <footer className="relative z-20">
-        <Footer />
-      </footer>
-    </div>
+  
+          
+      
+          
+        
+
+      <div className='mx-40'>
+
+      <JoinNow />
+      </div>
+  
+      <div className='mx-40'>
+
+      <Carousel />
+      </div>
+
+    
+     <footer>
+      <Footer></Footer>
+     </footer>
+     </>
   );
 }

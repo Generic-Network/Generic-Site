@@ -1,5 +1,5 @@
 html, body {
-    overflow-x: hidden;
+    
     margin: 0;
     padding: 0;
   }
@@ -198,3 +198,15 @@ html, body {
     user-select: none; /* Kein Markieren des Textes */
   }
   
+  @keyframes rainbow-slide {
+    0% {
+      transform: translateX(-100%) rotate(30deg);
+    }
+    100% {
+      transform: translateX(100%) rotate(30deg);
+    }
+  }
+  
+  .animate-rainbow-slide {
+    animation: rainbow-slide 1s linear;
+  }
