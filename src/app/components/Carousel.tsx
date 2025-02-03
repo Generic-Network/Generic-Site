@@ -79,7 +79,7 @@ export default function Carousel() {
       className='maincontainer'
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
-      onMouseMove={handleMouseMove}
+      onClick={handleMouseMove}
     >
       <div className="nav-arrow left" onClick={() => rotateCarousel('prev')}>❮</div>
       <div className="nav-arrow right" onClick={() => rotateCarousel('next')}>❯</div>
