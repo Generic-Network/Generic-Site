@@ -26,8 +26,8 @@ export default function home(){
                 <div className="mb-8">
                 <p className="font-bold">Generic Network UG i. Gr. (haftungsbeschränkt)</p>
                 <p>
-                    Huderstraße 15<br />
-                    21357 Bardowick,<br />
+                    Salzstraße 1<br />
+                    21337 Lüneburg<br />
                     Deutschland
                 </p>
                 </div>

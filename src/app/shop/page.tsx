@@ -1,5 +1,6 @@
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
+import MoreLinks from "../components/morelinks";
 
 export default function shop(){
   return (
@@ -10,7 +11,9 @@ export default function shop(){
           </NavBar>
         </nav>
         <main>
-
+          <div className="absolute top-[50%] left-[50%]">
+            <MoreLinks />
+          </div>
         </main>
         <footer className="static bottom-0 h-8">
           <Footer></Footer>
