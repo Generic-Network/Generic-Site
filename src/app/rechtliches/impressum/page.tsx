@@ -26,8 +26,8 @@ export default function home(){
                 <div className="mb-8">
                 <p className="font-bold">Generic Network UG i. Gr. (haftungsbeschränkt)</p>
                 <p>
-                    Salzstraße 1<br />
-                    21337 Lüneburg<br />
+                    Salzstr. 1<br />
+                    21335 Lüneburg<br />
                     Deutschland
                 </p>
                 </div>

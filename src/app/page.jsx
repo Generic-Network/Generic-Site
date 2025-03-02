@@ -2,6 +2,7 @@
 import './style.scss';
 import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
+import ServerStatus from "./components/ServerStatus";
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import JoinNow from './components/JoinNow'
@@ -182,28 +183,13 @@ export default function Homepage() {
               </div>
             </div>
           </div>
-          <div className='mt-10 container'>
-            <div className='p-4'>
-              <h1 className='text-[1.5rem]'>Server Status</h1>
-              <h3 className='font-sans font-bold'>Der Status aller wichtigen Server</h3>
-            </div>
+          </div>
+          <div className="mx-[10rem] my-[5rem] ">
+            <ServerStatus />
+          </div>
 
-            <div className='grid grid-cols-1 gap-4'>
-                <div className="mcss p-10 xl:mx-40 rounded-2xl text-center justify-center bg-slate-200 flex">
-                  <h1 className='pt-4 text-[1.3rem]'>Minecraft Server</h1>
-                </div>
-                <div className="wbss py-[7rem] xl:mx-40 rounded-2xl bg-slate-200"></div>
-                <div className="dbss py-[7rem] xl:mx-40 rounded-2xl bg-slate-200"></div>
-            </div>
-          </div>
-          </div>
-          
       </main>
   
-          
-      
-          
-        
 
       <div className='mx-40'>
 
