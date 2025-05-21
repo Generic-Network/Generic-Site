@@ -48,7 +48,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h5 className="font-semibold">Unternehmen</h5>
+          <h5 className="">Unternehmen</h5>
           <ul className={`mt-4 space-y-2 text-neutral-500 dark:text-neutral-400`}>
             <li><a className="text-sm hover:text-primary-600" href="/aboutus">Über uns</a></li>
             <li><a className="text-sm hover:text-primary-600" href="/rechtliches/privacy">Privatsphäre Richtlinien</a></li>
