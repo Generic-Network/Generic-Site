@@ -218,7 +218,7 @@ export default function Homepage() {
           </div>
         </div>
 
-        <div className="">
+        <div className="mx-4">
           <JoinNow />
         </div>
         
