@@ -167,11 +167,28 @@ export default function Homepage() {
                 alt="placeholder"
                 className="w-30 h-30 md:w-30 md:h-30 object-cover rounded-lg mb-4 md:mb-0 md:mr-4"
               />
-              <div>
-                <h3 className="text-xl font-bold mb-2">Spaßige Spielmodie</h3>
+              <div className="">
+                <h3 className="text-xl font-bold mb-2">Lorem, ipsum.</h3>
                 <p className="text-gray-600 transition-all cubic-bezier(.15,1.92,.96,.29)">
-                  Spiele spaßige und kompetitive Spiele mit deinen Freunden oder
-                  alleine.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, mollitia tempora molestiae voluptate sapiente iste qui harum libero ducimus reiciendis, ab, aperiam blanditiis. Quae magni quod, ullam vero nihil soluta!
+                </p>
+                <br />
+                <a href="/games" className="underline text-blue-500">
+                  Lerne mehr!
+                </a>
+              </div>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md flex flex-col md:flex-row items-center transition-all duration-300 cubic-bezier(.15,1.92,.96,.29) transform hover:scale-[1.1]">
+              <img
+                src="https://picsum.photos/250"
+                alt="placeholder"
+                className="w-30 h-30 md:w-30 md:h-30 object-cover rounded-lg mb-4 md:mb-0 md:mr-4"
+              />
+              <div>
+                <h3 className="text-xl font-bold mb-2">Lorem, ipsum.
+                </h3>
+                <p className="text-gray-600 transition-all cubic-bezier(.15,1.92,.96,.29)">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, beatae quae. Error, dolor! Ex, obcaecati. Accusantium ex non consequuntur architecto id aliquam, modi aperiam distinctio quis fugiat possimus, eaque a.
                 </p>
                 <br />
                 <a href="/games" className="underline text-blue-500">
@@ -186,28 +203,10 @@ export default function Homepage() {
                 className="w-30 h-30 md:w-30 md:h-30 object-cover rounded-lg mb-4 md:mb-0 md:mr-4"
               />
               <div>
-                <h3 className="text-xl font-bold mb-2">Professionelles Team</h3>
+                <h3 className="text-xl font-bold mb-2"><p>Lorem, ipsum.</p>
+                </h3>
                 <p className="text-gray-600 transition-all cubic-bezier(.15,1.92,.96,.29)">
-                  Wir haben ein hilfsbereites Team, welches keine Kosten und
-                  Mühen scheut, um dir das beste Spielerlebnis zu bereiten.
-                </p>
-                <br />
-                <a href="/games" className="underline text-blue-500">
-                  Lerne mehr!
-                </a>
-              </div>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-xl flex flex-col md:flex-row items-center transition-all duration-300 cubic-bezier(.15,1.92,.96,.29) transform hover:scale-[1.1]">
-              <img
-                src="https://picsum.photos/250"
-                alt="placeholder"
-                className="w-30 h-30 md:w-30 md:h-30 object-cover rounded-lg mb-4 md:mb-0 md:mr-4"
-              />
-              <div>
-                <h3 className="text-xl font-bold mb-2">Aktive Spielerschaft</h3>
-                <p className="text-gray-600 transition-all cubic-bezier(.15,1.92,.96,.29)">
-                  Wir haben eine aktive und nette Spielerschaft, die gerne mit
-                  dir interagiert und dir hilft.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque illum iure quos quod quisquam dolores consequatur omnis aut aliquam corrupti, asperiores rerum eum! Quia sapiente eligendi quos fuga enim eveniet.
                 </p>
                 <br />
                 <a href="/games" className="underline text-blue-500">
@@ -218,7 +217,7 @@ export default function Homepage() {
           </div>
         </div>
 
-        <div className="mx-4">
+        <div className="mx-60 below-700:mx-20 below-400:mx-4">
           <JoinNow />
         </div>
         
