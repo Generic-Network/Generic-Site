@@ -7,7 +7,7 @@ export default function minecrafturlcopy() {
         <>
         <header><NavBar /></header>
         <main>
-            <loadingComp />
+        
         </main>
         <footer><Footer /></footer>
         </>

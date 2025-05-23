@@ -1,5 +1,5 @@
 import localFont from 'next/font/local';
-
+import Image from 'next/image';
 
 
 const nexaBlack = localFont({
@@ -31,7 +31,7 @@ export default function JoinNow() {
               <button className="p-4 m-5 below-1000:m-2 px-12 rounded-2xl bg-white text-blue-600 hover:shadow-2xl shadow-sm transition-all ease-linear hover:bg-purple-600 hover:text-white">
                 Jetzt joinen
               </button>
-              <img
+              <Image
                 className="absolute right-[-90px] top-[-30px] xl:scale-125 below-700:hidden"
                 src="https://minecraft.wiki/images/thumb/Allay_JE2.gif/150px-Allay_JE2.gif?aca63"
                 alt="Allay"

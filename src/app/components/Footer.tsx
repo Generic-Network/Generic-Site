@@ -1,3 +1,4 @@
+import { Link } from 'lucide-react';
 import { Open_Sans } from 'next/font/google';
 import localFont from 'next/font/local';
 
@@ -8,7 +9,7 @@ const nexaBlack = localFont({
 
 
 
-const openSans = Open_Sans({ subsets: ['latin'], weight: ["800"] });
+const openSans = Open_Sans({ subsets: ['latin'], weight: ["300"] });
 
 
 export default function Footer() {
@@ -39,54 +40,54 @@ export default function Footer() {
       <div className="grid grid-cols-2 gap-x-2 gap-y-8 pb-12 sm:grid-cols-4 sm:gap-6 xl:grid-cols-7">
         
         <div className="col-span-full mb-2 sm:mb-8 xl:col-span-2 xl:mb-0">
-          <a className="-ml-1 inline-block" href="/">
+          <Link className="-ml-1 inline-block" href="/">
             <h1 className={`text-black font-extrabold ${nexaBlack.className}`}>Generic Network</h1>
-          </a>
-          <p className="mt-5 text-sm leading-[1.75] text-neutral-500 dark:text-neutral-400">
+          </Link>
+          <p className="mt-5 text-sm leading-[1.75] text-neutral-200 dark:text-neutral-400">
             Spiel einfach ungestört auf unsere Minecraft-Server.
           </p>
         </div>
 
         <div>
-          <h5 className="">Unternehmen</h5>
+          <h5 className="font-bold">Unternehmen</h5>
           <ul className={`mt-4 space-y-2 text-neutral-500 dark:text-neutral-400`}>
-            <li><a className="text-sm hover:text-primary-600" href="/aboutus">Über uns</a></li>
-            <li><a className="text-sm hover:text-primary-600" href="/rechtliches/privacy">Privatsphäre Richtlinien</a></li>
-            <li><a className="text-sm hover:text-primary-600" href="/rechtliches/agb">AGB</a></li>
-            <li><a className="text-sm hover:text-primary-600" href="/rechtliches/impressum">Impressum</a></li>
+            <li><Link className="text-sm hover:text-primary-500" href="/aboutus">Über uns</Link></li>
+            <li><Link className="text-sm hover:text-primary-200" href="/rechtliches/privacy">Privatsphäre Richtlinien</Link></li>
+            <li><Link className="text-sm hover:text-primary-200" href="/rechtliches/agb">AGB</Link></li>
+            <li><Link className="text-sm hover:text-primary-200" href="/rechtliches/impressum">Impressum</Link></li>
           </ul>
         </div>
 
         <div>
-          <h5 className="font-semibold">Produkt</h5>
+          <h5 className="font-medium">Produkt</h5>
           <ul className="mt-4 space-y-2 text-neutral-500 dark:text-neutral-400">
-            <li><a className="text-sm hover:text-primary-600" href="/shop">Shop</a></li>
-            <li><a className="text-sm hover:text-primary-600" href="/games">Spielmodi</a></li>
-            <li><a className="text-sm hover:text-primary-600" href="/infos">Infos</a></li>
-            <li><a className="text-sm hover:text-primary-600" href="/blog">Blog</a></li>
+            <li><Link className="text-sm hover:text-primary-600" href="/shop">Shop</Link></li>
+            <li><Link className="text-sm hover:text-primary-600" href="/games">Spielmodi</Link></li>
+            <li><Link className="text-sm hover:text-primary-600" href="/infos">Infos</Link></li>
+            <li><Link className="text-sm hover:text-primary-600" href="/blog">Blog</Link></li>
           </ul>
         </div>
 
         <div>
-          <h5 className="font-semibold">Support</h5>
+          <h5 className="font-medium">Support</h5>
           <ul className="mt-4 space-y-2 text-neutral-500 dark:text-neutral-400">
-            <li><a className="text-sm hover:text-primary-600" href="/changelog">Changelog</a></li>
-            <li><a className="text-sm hover:text-primary-600" href="/faq">FAQ</a></li>
-            <li><a className="text-sm hover:text-primary-600" href="mailto:support@generic-network.xyz">Email</a></li>
-            <li><a className="text-sm hover:text-primary-600" href="generic-network.xyz/discord" target="_blank">Discord</a></li>
+            <li><Link className="text-sm hover:text-primary-600" href="/changelog">Changelog</Link></li>
+            <li><Link className="text-sm hover:text-primary-600" href="/faq">FAQ</Link></li>
+            <li><Link className="text-sm hover:text-primary-600" href="mailto:support@generic-network.xyz">Email</Link></li>
+            <li><Link className="text-sm hover:text-primary-600" href="generic-network.xyz/discord" target="_blank">Discord</Link></li>
           </ul>
         </div>
 
         <div>
-            <h5 className="font-semibold">Sonstiges</h5>
-            <ul className="mt-4 space-y-2 text-neutral-500 dark:text-neutral-400">
-              <li><a className="text-sm hover:text-primary-600" href="/status">Status</a></li>
-              <li><a className="text-sm hover:text-primary-600" href="/services">Services</a></li>
-              <li><a className="text-sm hover:text-primary-600" href="/socials">Socials</a></li>
-              <li><a className="text-sm hover:text-primary-600" href="/" target="_blank">AJSDLAJSDKL</a></li>
-            </ul>
-          </div>
+          <h5 className="font-medium">Sonstiges</h5>
+          <ul className="mt-4 space-y-2 text-neutral-500 dark:text-neutral-400">
+            <li><Link className="text-sm hover:text-primary-600" href="/status">Status</Link></li>
+            <li><Link className="text-sm hover:text-primary-600" href="/services">Services</Link></li>
+            <li><Link className="text-sm hover:text-primary-600" href="/socials">Socials</Link></li>
+            <li><Link className="text-sm hover:text-primary-600" href="/" target="_blank">AJSDLAJSDKL</Link></li>
+          </ul>
         </div>
+
       </div>
       
       
@@ -98,7 +99,7 @@ export default function Footer() {
         </div>
         <span className="text-sm">© 2025 Generic Network Holding GmbH & CO KG - Alle Rechte vorbehalten.</span>
       </div>
-
-    </>
+    </div>
+  </>
   );
 }

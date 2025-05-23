@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Script from "next/script";
 
-export default function LoadingComp(): JSX.Element {
+export default function LoadingComp() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
       {/* Tenor GIF Embed */}

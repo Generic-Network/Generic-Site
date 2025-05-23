@@ -5,6 +5,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Open_Sans, Roboto } from 'next/font/google';
 import localFont from 'next/font/local';
 
+import Link from 'next/link';
+
 const nexaBlack = localFont({
   src: '../../../public/fonts/nexa-black.otf',
   variable: '--font-nexa-black', // CSS-Variable für Tailwind
@@ -51,13 +53,13 @@ export default function NavBar() {
       >
         <div className="flex h-12 items-center justify-between">
           <div className="flex items-center">
-            <a
+            <Link
               className="flex-shrink-0 items-center hidden xl:flex below-400:flex transform transition-all duration-500"
               aria-label="Generic Network Home"
               href="/"
             >
               <div className={`ml-1 text-2xl font-bold animate-slideIn ${nexaBlack.className} text-gray-100`}>Generic Network</div>
-            </a>
+            </Link>
             <div className="ml-4 below-400:hidden" aria-label="Main menu">
               <div
                 aria-label="Main"
@@ -72,7 +74,7 @@ export default function NavBar() {
                     dir=""
                   >
                     {[{ name: 'Home', href: '/' }, { name: 'Shop',  href: '/shop' }, { name: 'About Us', href: '/aboutus' }, { name: 'Contact', href: '/contact' }].map((item, index) => (
-                      <a
+                      <Link
                         key={item.name}
                         className={`group inline-flex h-8 w-max items-center justify-center rounded-lg px-1 text-sm font-medium transition-all duration-300 hover:bg-secondary-300/10 hover:text-gray-300 hover:text-accent-foreground`}
                         
@@ -83,7 +85,7 @@ export default function NavBar() {
                       >
                         <span className="mr-2"></span>
                         {item.name}
-                      </a>
+                      </Link>
                     ))}
                   </ul>
                 </div>
@@ -154,24 +156,24 @@ export default function NavBar() {
             <ul className="space-y-4 list-disc pl-6">
               {[{ name: 'Home', icon: <Home />, href: '/' }, { name: 'Shop', icon: <ShoppingCart />, href: '/shop' }, { name: 'About Us', icon: <Info />, href: '/aboutus' }, { name: 'Contact', icon: <Phone />, href: '/contact' }].map((item) => (
                 <li key={item.name}>
-                  <a
+                  <Link
                     href={item.href}
                     className="text-lg font-medium text-gray-600 transition-all duration-300 hover:text-black hover:text-[1.3rem] hover:font-semibold flex items-center"
                   >
                     <span className="mr-2">{item.icon}</span>
                     {item.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
             <div className="mt-auto">
-              <a
+              <Link
                 href="/settings"
                 className="text-lg font-medium text-gray-600 transition-all duration-300 hover:text-black hover:text-[1.3rem] hover:font-semibold flex items-center"
               >
                 <span className="mr-2">{<Settings />}</span>
                 Settings
-              </a>
+              </Link>
             </div>
           </div>
         </div>
