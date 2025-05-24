@@ -1,5 +1,5 @@
 import Footer from "../components/Footer";
-import NavBar from "../components/NavBar";
+import NavBar from "../components/NavBarTesti";
 
 export default function games(){
   return (

@@ -1,5 +1,5 @@
 
-import NavBar from "../components/NavBar";
+import NavBar from "../components/NavBarTesti";
 import Footer from "../components/Footer";
 import loadingComp from "../components/LoadingComp";
 export default function minecrafturlcopy() {
