@@ -74,8 +74,10 @@ export default function Homepage() {
 
   return (
     <>
-      <nav className="z-50 top-0 absolute w-full">
-        <NavBar />
+      <nav className="fixed top-0 left-0 w-full z-50 bg-gray-600 bg-opacity-0 pointer-events-none">
+        <div className="pointer-events-auto">
+          <NavBar />
+        </div>
       </nav>
       <main className={`${nexaBlack.className}`}>
         <div className="h-screen relative overflow-hidden">
@@ -142,9 +144,8 @@ export default function Homepage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                Spiel einfach und unkompliziert auf unserem{" "}
-                <a href="">Minecraft-Server</a> mit exzellenter Performance,
-                wunderbarer Community und einem hilfsbereiten Team.
+                Lorem ipsum dolor sit amet consectetur{" "}
+                <a href="">adipiscing elit</a> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud.
               </motion.p>
               <motion.button
                 className="bg-white text-purple-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-opacity-90 transition-all"
@@ -168,9 +169,9 @@ export default function Homepage() {
                 className="w-30 h-30 md:w-30 md:h-30 object-cover rounded-lg mb-4 md:mb-0 md:mr-4"
               />
               <div className="">
-                <h3 className="text-xl font-bold mb-2">Lorem, ipsum.</h3>
+                <h3 className="text-xl font-bold mb-2">Lorem ipsum</h3>
                 <p className="text-gray-600 transition-all cubic-bezier(.15,1.92,.96,.29)">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, mollitia tempora molestiae voluptate sapiente iste qui harum libero ducimus reiciendis, ab, aperiam blanditiis. Quae magni quod, ullam vero nihil soluta!
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
                 </p>
                 <br />
                 <a href="/games" className="underline text-blue-500">
@@ -185,10 +186,10 @@ export default function Homepage() {
                 className="w-30 h-30 md:w-30 md:h-30 object-cover rounded-lg mb-4 md:mb-0 md:mr-4"
               />
               <div>
-                <h3 className="text-xl font-bold mb-2">Lorem, ipsum.
+                <h3 className="text-xl font-bold mb-2">Lorem ipsum
                 </h3>
                 <p className="text-gray-600 transition-all cubic-bezier(.15,1.92,.96,.29)">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, beatae quae. Error, dolor! Ex, obcaecati. Accusantium ex non consequuntur architecto id aliquam, modi aperiam distinctio quis fugiat possimus, eaque a.
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi aliquip ex ea.
                 </p>
                 <br />
                 <a href="/games" className="underline text-blue-500">
@@ -203,10 +204,10 @@ export default function Homepage() {
                 className="w-30 h-30 md:w-30 md:h-30 object-cover rounded-lg mb-4 md:mb-0 md:mr-4"
               />
               <div>
-                <h3 className="text-xl font-bold mb-2"><p>Lorem, ipsum.</p>
+                <h3 className="text-xl font-bold mb-2">Lorem ipsum
                 </h3>
                 <p className="text-gray-600 transition-all cubic-bezier(.15,1.92,.96,.29)">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque illum iure quos quod quisquam dolores consequatur omnis aut aliquam corrupti, asperiores rerum eum! Quia sapiente eligendi quos fuga enim eveniet.
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip.
                 </p>
                 <br />
                 <a href="/games" className="underline text-blue-500">

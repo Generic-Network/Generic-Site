@@ -35,6 +35,8 @@ export default function JoinNow() {
                 className="absolute right-[-90px] top-[-30px] xl:scale-125 below-700:hidden"
                 src="https://minecraft.wiki/images/thumb/Allay_JE2.gif/150px-Allay_JE2.gif?aca63"
                 alt="Allay"
+                width={100}
+                height={100}
               />
             </div>
           

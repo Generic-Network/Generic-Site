@@ -48,19 +48,19 @@ export default function NavBar() {
   return (
     <>
       <nav
-        className={`rounded-2xl border-[1.5px] border-gray-200 bg-background px-2 transition-all mt-5 duration-300 ease-in-out dark:border-gray-500 p-1 mx-8 bg-black text-gray-200 lg:mx-20 max-w-[1024px]:mx-20 bg-opacity-50 z-50 ${nexaBlack.className}`} 
+        className={`rounded-2xl border-[1.5px] border-gray-200 bg-background px-2 transition-all mt-5 duration-300 ease-in-out dark:border-gray-500 p-1 mx-8 bg-black text-gray-200 lg:mx-20 max-w-[1024px]:mx-20 bg-opacity-50 z-50 pointer-events-auto ${nexaBlack.className}`} 
         aria-label="Main navigation"
       >
         <div className="flex h-12 items-center justify-between">
           <div className="flex items-center">
             <Link
-              className="flex-shrink-0 items-center hidden xl:flex below-400:flex transform transition-all duration-500"
+              className="flex-shrink-0 items-center hidden xl:flex below-400:flex transform transition-all duration-500 pointer-events-auto"
               aria-label="Generic Network Home"
               href="/"
             >
               <div className={`ml-1 text-2xl font-bold animate-slideIn ${nexaBlack.className} text-gray-100`}>Generic Network</div>
             </Link>
-            <div className="ml-4 below-400:hidden" aria-label="Main menu">
+            <div className="ml-4 below-400:hidden pointer-events-auto" aria-label="Main menu">
               <div
                 aria-label="Main"
                 data-orientation=""
@@ -74,9 +74,9 @@ export default function NavBar() {
                     dir=""
                   >
                     {[{ name: 'Home', href: '/' }, { name: 'Shop',  href: '/shop' }, { name: 'About Us', href: '/aboutus' }, { name: 'Contact', href: '/contact' }].map((item, index) => (
-                      <Link
+                      <a
                         key={item.name}
-                        className={`group inline-flex h-8 w-max items-center justify-center rounded-lg px-1 text-sm font-medium transition-all duration-300 hover:bg-secondary-300/10 hover:text-gray-300 hover:text-accent-foreground`}
+                        className={`group inline-flex h-8 w-max items-center justify-center rounded-lg px-1 text-sm font-medium transition-all duration-300 hover:bg-secondary-300/10 hover:text-gray-300 hover:text-accent-foreground pointer-events-auto`}
                         
                         style={{
                           animation: `slideIn 0.5s ease-out ${index * 0.1}s forwards`,
@@ -85,7 +85,7 @@ export default function NavBar() {
                       >
                         <span className="mr-2"></span>
                         {item.name}
-                      </Link>
+                      </a>
                     ))}
                   </ul>
                 </div>
@@ -93,11 +93,10 @@ export default function NavBar() {
             </div>
           </div>
           <div className="hidden space-x-4 lg:flex"></div>
-          <div className="">
-            {/* diesen button meine ich keinen anderen aenderenichts anderes kein css oder sowas nur das */}
+          <div className="pointer-events-auto">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center gap-2 justify-center whitespace-nowrap text-sm font-medium color ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-10 w-10 rounded-md hover:bg-secondary-300/10 "
+              className="inline-flex items-center gap-2 justify-center whitespace-nowrap text-sm font-medium color ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-10 w-10 rounded-md hover:bg-secondary-300/10 pointer-events-auto cursor-pointer"
               aria-label="Open menu"
               type="button"
               
@@ -127,14 +126,14 @@ export default function NavBar() {
         {/* Modal Panel */}
         <div
           ref={menuRef}
-          className={`fixed inset-y-0 right-0 w-64 bg-white shadow-2xl transform transition-transform duration-300 ease-in-out ${
+          className={`fixed inset-y-0 right-0 w-64 bg-white shadow-2xl transform transition-transform duration-300 ease-in-out z-[60] ${
             isMenuOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
         >
           {/* Close Button */}
           <button
             onClick={() => setIsMenuOpen(false)}
-            className={`absolute top-4 right-4 p-2 rounded-full hover:bg-gray-100 transition-all duration-300 cubic-bezier(0,2.14,.83,.67) hover:${roboto.className} hover:text-[3rem]`}
+            className={`absolute top-4 right-4 p-2 rounded-full hover:bg-gray-100 transition-all duration-300 cubic-bezier(0,2.14,.83,.67) hover:${roboto.className} hover:text-[3rem] cursor-pointer`}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -158,7 +157,7 @@ export default function NavBar() {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-lg font-medium text-gray-600 transition-all duration-300 hover:text-black hover:text-[1.3rem] hover:font-semibold flex items-center"
+                    className="text-lg font-medium text-gray-600 transition-all duration-300 hover:text-black hover:text-[1.3rem] hover:font-semibold flex items-center cursor-pointer"
                   >
                     <span className="mr-2">{item.icon}</span>
                     {item.name}
@@ -169,7 +168,7 @@ export default function NavBar() {
             <div className="mt-auto">
               <Link
                 href="/settings"
-                className="text-lg font-medium text-gray-600 transition-all duration-300 hover:text-black hover:text-[1.3rem] hover:font-semibold flex items-center"
+                className="text-lg font-medium text-gray-600 transition-all duration-300 hover:text-black hover:text-[1.3rem] hover:font-semibold flex items-center cursor-pointer"
               >
                 <span className="mr-2">{<Settings />}</span>
                 Settings
