@@ -1,14 +1,14 @@
 "use client";
 import "./style.scss";
 import Footer from "./components/Footer";
-import NavBar from "./components/NavBarTesti";
+import NavBar from "./components/NavBar";
 import ServerStatus from "./components/ServerStatus";
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import JoinNow from "./components/JoinNow";
 import Carousel from "./components/Carousel";
 import localFont from "next/font/local";
-import NavBarTest from "./components/Navbar";
+
 
 const nexaBlack = localFont({
   src: "../../public/fonts/nexa-black.otf",
@@ -76,9 +76,8 @@ export default function Homepage() {
   return (
     <>
       
-        
-          <NavBar/>
-      
+        <NavBar></NavBar>
+          
       <main className={` ${nexaBlack.className}`}>
         <div className=" h-screen relative overflow-hidden">
           <div className="gradient-bg" style={{ willChange: "transform" }}>
