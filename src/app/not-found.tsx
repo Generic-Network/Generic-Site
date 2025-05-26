@@ -22,6 +22,7 @@ export default function NotFound() {
         >
           ← Back to Home
         </Link>
+        <p className="text-[0.5rem]">This is not a real Bluescreen! </p>
       </div>
     </div>
   );
