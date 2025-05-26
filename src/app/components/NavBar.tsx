@@ -19,16 +19,16 @@ export default function NavBar() {
             >
               <path
                 fill="#000"
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 d="M7 7.434h.012c3.238.002 3.272.135 3.909 2.606.148.575.328 1.275.589 2.13.79 2.587.94 2.964 1.112 3.399.131.331.276.696.728 2.099 1.018 3.163-.187 7.283-6.338 7.484h-.024C.838 24.95-.368 20.83.651 17.668c.451-1.403.596-1.768.727-2.1.173-.434.323-.811 1.112-3.398.261-.855.442-1.556.59-2.13.636-2.47.67-2.604 3.908-2.606z"
-                clip-rule="evenodd"
+                clipRule="evenodd"
               ></path>
               <circle cx="10.227" cy="14.602" r="0.711" fill="#000"></circle>
               <path
                 fill="#000"
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 d="m8.676 6.592-.013.01V6.59l-.015-.004.013-.011c-.028-.292-.118-1.824.83-2.866.965-1.06 3.039-.917 3.372-.886l.005-.005.042.001s-.035 2.4-1.308 3.306c-1.146.816-2.642.532-2.926.468"
-                clip-rule="evenodd"
+                clipRule="evenodd"
               ></path>
               <path
                 fill="#000"
@@ -66,9 +66,9 @@ export default function NavBar() {
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                         className="lucide lucide-chevron-down relative top-px ml-px h-3 w-3 stroke-[2.8] text-[#b3b3b3] transition duration-200 group-data-[state=open]:rotate-180"
                         aria-hidden="true"
                       >
@@ -92,9 +92,9 @@ export default function NavBar() {
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                         className="lucide lucide-chevron-down relative top-px ml-px h-3 w-3 stroke-[2.8] text-[#b3b3b3] transition duration-200 group-data-[state=open]:rotate-180"
                         aria-hidden="true"
                       >
@@ -161,9 +161,9 @@ export default function NavBar() {
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               className="lucide lucide-menu h-6 w-6"
             >
               <line x1="4" x2="20" y1="12" y2="12"></line>

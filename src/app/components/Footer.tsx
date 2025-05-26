@@ -1,4 +1,4 @@
-import { Link } from 'lucide-react';
+import Link from 'next/link';
 import { Open_Sans } from 'next/font/google';
 import localFont from 'next/font/local';
 
