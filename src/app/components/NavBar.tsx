@@ -4,7 +4,7 @@ export default function NavBar() {
   return (
     <>
       <nav
-        className="mx-auto flex max-w-[1070px] items-center justify-between px-2 transition-all duration-300 ease-in-out dark:border-gray-50"
+        className="mx-auto flex max-w-[1070px] items-center justify-between px-2 transition-all duration-300 ease-in-out dark:border-gray-50 py-2"
         aria-label="Main navigation"
       >
         <div className="flex items-center">
@@ -31,25 +31,25 @@ export default function NavBar() {
                   dir="ltr"
                 >
                   <li>
-                    <Link href="/" className="transition-all ease-linear hover:text-gray-800">Home</Link>
+                    <Link href="/" className="transition-all p-2 ease-linear hover:text-gray-800">Home </Link>
                        
                   </li>
                   <li>
-                    <Link href="/aboutus">About Us</Link>
+                    <Link href="/aboutus"> About Us </Link>
                   </li>
                   <a
-                    className="group inline-flex h-8 w-max items-center justify-center rounded-lg bg-background px-1 text-sm transition-colors hover:bg-secondary-300/10 hover:text-accent-foreground disabled:pointer-events-none disabled:opacity-50"
+                    className="group inline-flex h-8 w-max items-center justify-center rounded-lg bg-background p-2 text-sm transition-colors hover:bg-secondary-300/10 hover:text-accent-foreground disabled:pointer-events-none disabled:opacity-50"
                     target="_self"
                     data-radix-collection-item=""
-                    href="/pricing"
+                    href="/contact"
                   >
-                    Pricing
+                    Contact
                   </a>
                   <a
-                    className="group inline-flex h-8 w-max items-center justify-center rounded-lg bg-background px-1 text-sm transition-colors hover:bg-secondary-300/10 hover:text-accent-foreground disabled:pointer-events-none disabled:opacity-50"
+                    className="group inline-flex h-8 w-max items-center justify-center rounded-lg bg-background p-2 text-sm transition-colors hover:bg-secondary-300/10 hover:text-accent-foreground disabled:pointer-events-none disabled:opacity-50"
                     target="_blank"
                     data-radix-collection-item=""
-                    href="https://github.com/trypear/pearai-master"
+                    href="/contact"
                   >
                     GitHub
                   </a>
