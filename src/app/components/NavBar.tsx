@@ -1,6 +1,20 @@
+import { errorMonitor } from "events";
 import Link from "next/link";
 
+
+
 export default function NavBar() {
+
+  function copyIp(): any {
+    console.log('button pressed')
+    const ip = 'generic-network.xyz'
+    navigator.clipboard.writeText(ip).then(() => {
+      console.log(`copied ${ip} to clipboard.`)
+    }).catch(err => {
+      console.error('error', err)
+    })
+  }
+
   return (
     <>
       <nav
@@ -60,24 +74,13 @@ export default function NavBar() {
           </nav>
         </div>
         <div className="hidden items-center space-x-2 lg:flex">
-          <div className="flex items-center space-x-4">
-            <div className="m-0 inline-flex rounded-xl border border-[#e6e6e6] p-0">
-              <a href="/signin">
-                <button className="inline-flex items-center gap-2 justify-center whitespace-nowrap ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-secondary-300/10 hover:text-accent-foreground rounded-lg px-4 py-2 h-9 rounded-r-none pl-3 pr-2 text-base font-normal">
-                  Sign in
-                </button>
-              </a>
-              <div className="w-[1px] self-stretch bg-[#e6e6e6]"></div>
-              <a href="/signup">
-                <button className="inline-flex items-center gap-2 justify-center whitespace-nowrap ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-secondary-300/10 hover:text-accent-foreground rounded-lg px-4 py-2 h-9 rounded-l-none border-0 pl-2 pr-3 text-base font-normal">
-                  Sign up
-                </button>
-              </a>
-            </div>
-          </div>
-          <button className="inline-flex items-center gap-2 justify-center whitespace-nowrap ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-white-main dark:hover:bg-primary-600 hover:shadow-sm py-2 h-9 rounded-xl bg-black px-4 text-base font-normal hover:bg-black/80">
-            Download for free
-          </button>
+          
+         <button
+              onClick={copyIp}
+              className="inline-flex items-center gap-2 justify-center whitespace-nowrap ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-white-main dark:hover:bg-gray-400 font-bold hover:shadow-sm py-2 h-9 rounded-xl bg-gray-200 px-4 text-base hover:bg-black/80"
+            >
+              Start Playing
+            </button>
         </div>
         <div className="lg:hidden">
           <button
