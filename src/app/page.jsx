@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import JoinNow from "./components/JoinNow";
 import Carousel from "./components/Carousel";
 import localFont from "next/font/local";
+import { Tilt } from 'react-next-tilt';
 
 
 const nexaBlack = localFont({
@@ -28,7 +29,7 @@ function useInteractiveBubble() {
     bubble.style.willChange = "transform";
 
     const move = () => {
-      const pos = positionRef.current;
+      const pos = positionRef.current; 
       pos.curX += (pos.tgX - pos.curX) / 20;
       pos.curY += (pos.tgY - pos.curY) / 20;
       // Verwendung von translate3d, um GPU-Beschleunigung zu erzwingen
@@ -161,13 +162,11 @@ export default function Homepage() {
 
         <div className={`container mx-auto px-4 py-24 ${nexaBlack.className}`}>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
-            <div className="bg-white p-6 rounded-lg shadow-xl flex flex-col md:flex-row items-center transition-all duration-300 cubic-bezier(.15,1.92,.96,.29) transform hover:scale-[1.1]">
-              <img
-                src="https://picsum.photos/250"
-                alt="placeholder"
-                className="w-30 h-30 md:w-30 md:h-30 object-cover rounded-lg mb-4 md:mb-0 md:mr-4"
-              />
-              <div className="">
+            <Tilt>
+
+            <div className="bg-blue-50 border-blue-200 p-6 rounded-lg shadow-xl flex flex-col md:flex-row items-center transition-all duration-300 cubic-bezier(.15,1.92,.96,.29) transform hover:scale-[1.1]" data-tilt>
+              
+              <div className="" >
                 <h3 className="text-xl font-bold mb-2">Lorem ipsum</h3>
                 <p className="text-gray-600 transition-all cubic-bezier(.15,1.92,.96,.29)">
                   Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
@@ -178,12 +177,9 @@ export default function Homepage() {
                 </a>
               </div>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-md flex flex-col md:flex-row items-center transition-all duration-300 cubic-bezier(.15,1.92,.96,.29) transform hover:scale-[1.1]">
-              <img
-                src="https://picsum.photos/250"
-                alt="placeholder"
-                className="w-30 h-30 md:w-30 md:h-30 object-cover rounded-lg mb-4 md:mb-0 md:mr-4"
-              />
+            </Tilt>
+            <div className="bg-purple-50 border-purple-200 p-6 rounded-lg shadow-md flex flex-col md:flex-row items-center transition-all duration-300 cubic-bezier(.15,1.92,.96,.29) transform hover:scale-[1.1]">
+              
               <div>
                 <h3 className="text-xl font-bold mb-2">Lorem ipsum
                 </h3>
@@ -196,12 +192,8 @@ export default function Homepage() {
                 </a>
               </div>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-xl flex flex-col md:flex-row items-center transition-all duration-300 cubic-bezier(.15,1.92,.96,.29) transform hover:scale-[1.1]">
-              <img
-                src="https://picsum.photos/250"
-                alt="placeholder"
-                className="w-30 h-30 md:w-30 md:h-30 object-cover rounded-lg mb-4 md:mb-0 md:mr-4"
-              />
+            <div className="bg-amber-50 border-amber-200 p-6 rounded-lg shadow-xl flex flex-col md:flex-row items-center transition-all duration-300 cubic-bezier(.15,1.92,.96,.29) transform hover:scale-[1.1]">
+              
               <div>
                 <h3 className="text-xl font-bold mb-2">Lorem ipsum
                 </h3>

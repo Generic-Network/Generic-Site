@@ -24,7 +24,7 @@ export default function NavBar() {
         <div className="flex items-center">
           <a
             className="flex flex-shrink-0 items-center"
-            aria-label="PearAI Home"
+            aria-label="Generic Network Home"
             href="/"
           >
             
@@ -49,24 +49,24 @@ export default function NavBar() {
                        
                   </li>
                   <li>
-                    <Link href="/aboutus"> About Us </Link>
+                    <Link href="/aboutus transition-all p-2 ease-linear hover:text-gray-800"> About Us </Link>
                   </li>
-                  <a
-                    className="group inline-flex h-8 w-max items-center justify-center rounded-lg bg-background p-2 text-sm transition-colors hover:bg-secondary-300/10 hover:text-accent-foreground disabled:pointer-events-none disabled:opacity-50"
+                  <Link 
+                    className=" ease-linear hover:text-gray-800 group inline-flex h-8 w-max items-center justify-center rounded-lg bg-background p-2 text-sm transition-colors hover:bg-secondary-300/10 hover:text-accent-foreground disabled:pointer-events-none disabled:opacity-50"
                     target="_self"
                     data-radix-collection-item=""
                     href="/contact"
                   >
                     Contact
-                  </a>
-                  <a
-                    className="group inline-flex h-8 w-max items-center justify-center rounded-lg bg-background p-2 text-sm transition-colors hover:bg-secondary-300/10 hover:text-accent-foreground disabled:pointer-events-none disabled:opacity-50"
+                  </Link  >
+                  <Link 
+                    className="group inline-flex ease-linear hover:text-gray-800 h-8 w-max items-center justify-center rounded-lg bg-background p-2 text-sm transition-colors hover:bg-secondary-300/10 hover:text-accent-foreground disabled:pointer-events-none disabled:opacity-50"
                     target="_blank"
                     data-radix-collection-item=""
                     href="/contact"
                   >
                     GitHub
-                  </a>
+                  </Link  >
                 </ul>
               </div>
               <div className="absolute left-0 top-full flex justify-center"></div>
