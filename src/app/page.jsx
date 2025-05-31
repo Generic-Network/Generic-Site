@@ -1,4 +1,6 @@
-"use client";
+'use client';
+
+
 import "./style.scss";
 import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
@@ -8,7 +10,7 @@ import { motion } from "framer-motion";
 import JoinNow from "./components/JoinNow";
 import Carousel from "./components/Carousel";
 import localFont from "next/font/local";
-import { Tilt } from 'react-next-tilt';
+import Head from "next/head";
 
 
 const nexaBlack = localFont({
@@ -74,13 +76,20 @@ export default function Homepage() {
   const interactiveBubbleRef = useInteractiveBubble();
   const bubbles = useBackgroundBubbles();
 
+  useEffect(() => {
+    document.title = "Generic Network | Homepage";
+    })
+
   return (
     <>
-      
         <NavBar></NavBar>
           
       <main className={` ${nexaBlack.className}`}>
+        
         <div className=" h-screen relative overflow-hidden">
+          <Head>
+            <title>Generic Network | Homepage</title>
+          </Head>
           <div className="gradient-bg" style={{ willChange: "transform" }}>
             {/* Optimierter Hintergrundgradient mit Hardware-Acceleration */}
             <div
@@ -162,7 +171,7 @@ export default function Homepage() {
 
         <div className={`container mx-auto px-4 py-24 ${nexaBlack.className}`}>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
-            <Tilt>
+   
 
             <div className="bg-blue-50 border-blue-200 p-6 rounded-lg shadow-xl flex flex-col md:flex-row items-center transition-all duration-300 cubic-bezier(.15,1.92,.96,.29) transform hover:scale-[1.1]" data-tilt>
               
@@ -177,7 +186,7 @@ export default function Homepage() {
                 </a>
               </div>
             </div>
-            </Tilt>
+            
             <div className="bg-purple-50 border-purple-200 p-6 rounded-lg shadow-md flex flex-col md:flex-row items-center transition-all duration-300 cubic-bezier(.15,1.92,.96,.29) transform hover:scale-[1.1]">
               
               <div>
